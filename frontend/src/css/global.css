@@ -1,0 +1,13 @@
+body {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+.container {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+.vh-95{
+    height: 95vh;
+}

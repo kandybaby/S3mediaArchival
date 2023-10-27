@@ -1,0 +1,83 @@
+.dark-modal {
+    background-color: #333;
+    color: #e6e6e6;
+    border: none;
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+    border-color: #555;
+}
+
+.dark-modal input,
+.dark-modal select,
+.dark-modal .custom-control-label {
+    color: #e6e6e6;
+}
+
+.dark-modal .alert-danger {
+    background-color: #a83333;
+    border-color: #992b2b;
+}
+
+.dark-modal input.form-control{
+    background-color: #555;  /* Light grey for the background */
+    color: #e6e6e6;  /* Text color to contrast against light grey */
+    border: 1px solid #777;  /* Slightly lighter border for distinction */
+}
+
+.dark-modal select.form-control {
+    appearance: none; /* For standard browsers */
+    -webkit-appearance: none; /* For WebKit browsers */
+    padding-right: 1.5rem; /* Add padding to the right side of select box to make room for the custom arrow */
+    background: #555 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right 0.5rem center;
+    border: 1px solid #777;  /* Slightly lighter border for distinction */
+}
+
+/* Styling for the checkbox and label */
+.dark-modal .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #777;  /* Check color */
+    border-color: #777;
+}
+
+.dark-modal .custom-control-label::before {
+    background-color: #555;  /* Checkbox background */
+    border-color: #777;  /* Checkbox border */
+}
+
+.dark-modal .custom-control-label {
+    margin-left: 1rem;  /* Increase spacing between checkbox and label */
+}
+
+/* Increase size of the checkbox */
+.dark-modal .custom-control-input {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Adjust the vertical alignment of the checkbox and label */
+.dark-modal .custom-control-input,
+.dark-modal .custom-control-label::before {
+    position: relative;
+    top: 0.2rem; /* Adjust the top position to align checkbox with label text */
+}
+
+/* Add margin to the bottom of the checkbox */
+.dark-modal .custom-control.custom-checkbox {
+    margin-bottom: 1rem; /* Spacing between checkbox and the bucket name textbox */
+}
+
+.custom-border-modal {
+    border: 2px solid white;
+    display: inline-block;
+    background-clip: padding-box;
+}
+
+.btn:disabled {
+    cursor: not-allowed; /* Optional if you want the cursor to show as not-allowed */
+    opacity: 0.6; /* Lower the opacity to give a visual feedback of being disabled */
+}
+
+.dark-modal .modal-dialog {
+    max-width: 30%;
+}

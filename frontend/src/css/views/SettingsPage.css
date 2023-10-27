@@ -1,0 +1,9 @@
+.settings-container input.form-control{
+    background-color: #555;
+    color: #e6e6e6;
+    border: 1px solid #777;
+}
+
+.narrow {
+    max-width: 600px;
+}

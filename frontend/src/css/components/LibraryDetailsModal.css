@@ -1,0 +1,46 @@
+.dark-modal {
+    background-color: #333;
+    color: #e6e6e6;
+    border: none;
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+    border-color: #555;
+}
+
+.dark-modal .detail {
+    margin-bottom: 0.5rem;
+    color: #e6e6e6;
+}
+
+.custom-border-modal {
+    border: 2px solid white;
+    display: inline-block;
+    background-clip: padding-box;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn.btn-danger {
+    background-color: #a83333;
+    border-color: #992b2b;
+}
+
+.btn.btn-secondary {
+    background-color: #555;
+    border-color: #777;
+    color: #e6e6e6;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-secondary:hover {
+    opacity: 0.8;
+}
+
+.wide-modal {
+    max-width: 30%;
+}
