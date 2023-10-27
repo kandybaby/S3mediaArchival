@@ -1,0 +1,41 @@
+.results-per-page {
+    display: flex;
+    align-items: center;
+}
+
+.results-per-page label {
+    margin-right: 10px;
+}
+
+.results-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 1.5rem;
+    background: #4a4a4a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right 0.5rem center;
+    border: 1px solid #6a6a6a;
+    color: #dcdcdc;
+}
+/* Button Styling */
+.pagination-controls button {
+    padding: 10px 15px;
+    margin: 0 5px;
+}
+
+.active-page {
+    font-weight: bold;
+    background-color: #4a4a4a;
+    color: #6a6a6a;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-controls button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #e0e0e0;
+}

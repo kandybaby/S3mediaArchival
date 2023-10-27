@@ -1,0 +1,61 @@
+.table {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table th:first-child,
+.table td:first-child {
+    width: 5%;
+}
+
+/* Update column widths for UploadTable */
+.narrow-column,
+.wide-column {
+    width: 47.5%;
+}
+
+.table td,
+.table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dark-table {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    border: none;
+}
+
+/* Table Headers */
+.dark-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #4a4a4a;
+    border-color: #6a6a6a;
+    font-weight: bold;
+    color: #dcdcdc;
+}
+
+/* Table Data Cells Styling */
+.dark-table td {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    padding: 8px 8px;
+}
+
+.dark-table input[type="checkbox"] {
+    background-color: #4a4a4a;
+    border: 1px solid #6a6a6a;
+}
+
+.table-container {
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.table-container + .pagination-controls {
+    margin-top: 20px;
+}

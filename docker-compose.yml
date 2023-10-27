@@ -1,0 +1,17 @@
+version: '3'
+services:
+  media-archival:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TRANSFER_THROUGHPUT=0.5
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./appdata:/appdata
+      -  /data:/data
+      - ./download:/testDownload
+      - ./temp:/downloadDirectory
