@@ -27,7 +27,7 @@ RUN mvn clean package -DskipTests
 FROM bellsoft/liberica-openjdk-alpine:18.0.2.1
 
 # Copy the backend JAR file from the builder stage
-COPY --from=backend-builder /app/backend/target/MediaArchivalBackend-0.0.1.jar /app/app.jar
+COPY --from=backend-builder /app/backend/target/MediaArchivalBackend-0.1.0.jar /app/app.jar
 
 WORKDIR /app
 
