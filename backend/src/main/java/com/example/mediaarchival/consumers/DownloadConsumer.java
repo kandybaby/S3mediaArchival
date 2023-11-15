@@ -86,20 +86,20 @@ public class DownloadConsumer {
       } catch (CancellationException ignore) {
       } catch (Exception any) {
         errorLogger.error("error downloading media: " + any.getMessage());
-        media.setDownloadSuccess(false);
-        mediaRepository.save(media);
       } finally {
         resetMedia(media);
+        media.setDownloadSuccess(false);
+        mediaRepository.save(media);
       }
     } else {
       resetMedia(media);
+      mediaRepository.updateIsRecoveringById(media.getId(), false);
     }
   }
 
   private void resetMedia(MediaModel media) {
     media.setDownloadProgress(-1);
     media.setRestored(false);
-    media.setRecovering(false);
     media.setRestoring(false);
     media.setDownloadProgress(-1);
     media.setJobCancelled(false);

@@ -150,4 +150,9 @@ public interface MediaRepository
   @Transactional
   @Query("UPDATE MediaModel m SET m.isRestored = :isRestored WHERE m.id = :id")
   void updateIsRestoredById(Long id, boolean isRestored);
+
+  @Modifying
+  @Transactional
+  @Query("UPDATE MediaModel m SET m.isRecovering = :isRecovering WHERE m.id = :id")
+  void updateIsRecoveringById(Long id, boolean isRecovering);
 }
