@@ -100,14 +100,6 @@ After successfully installing Docker, the next step is to pull and run the S3 Me
 2. Pull the image using the following command: ```docker pull ghcr.io/kandybaby/s3mediaarchival:latest``` 
 3. You could alternatively use ```docker pull ghcr.io/kandybaby/s3mediaarchival:0.1.0```, or whatever your desired version of the application is. 
 
-### A Note on Volume Permissions 
-
-You could end up with issues where docker attempts to read or write to the directories you have mapped, if docker does not have permission to do so. This probably won't be a problem, but if you are on MacOS or Windows, you can navigate to the "Resources" > "File Sharing" section of the settings on docker desktop to add the volumes. On windows, running docker desktop as admin can help. 
-
-Permission issues tend to be different on linux, and if you are using linux I am going to assume you understand how users and groups work. You are able to use --user flag in the docker run command to set which user:group the container will use. Alternatively, if you are using linux and do not understand users / groups, I would highly recommend it you look it up, but for now, if you add ```--user "$(id -u):$(id -g)``` to your docker run command will probably fix any permission issues. 
-
-MacOS users can also attach the ```--user "$(id -u):$(id -g)``` flag to their docekr run if they continue to have issues. 
-
 ### Docker Run
 
 You are now ready to run the application. You will need to construct the following command to run in your cmd or terminal. 
@@ -134,6 +126,16 @@ Once you have substituted in all your own configurations from the application co
 The default username and password is ```admin``` and ```password``` respectively 
 
 You're now ready to check out the [User Guide!](./UserGuide.md)
+
+
+### A Note on Volume Permissions
+
+You could end up with issues where docker attempts to read or write to the directories you have mapped, if docker does not have permission to do so. This probably won't be a problem, but if you are on MacOS or Windows, you can navigate to the "Resources" > "File Sharing" section of the settings on docker desktop to add the volumes. On windows, running docker desktop as admin can help.
+
+Permission issues tend to be different on linux, and if you are using linux I am going to assume you understand how users and groups work. You are able to use --user flag in the docker run command to set which user:group the container will use. Alternatively, if you are using linux and do not understand users / groups, I would highly recommend it you look it up, but for now, if you add ```--user "$(id -u):$(id -g)``` to your docker run command will probably fix any permission issues.
+
+MacOS users can also attach the ```--user "$(id -u):$(id -g)``` flag to their docekr run if they continue to have issues.
+
 
 ## Troubleshooting Issues 
 If you are unable to get the application to run, please open an issue on the github repo, I will do my best to offer support.

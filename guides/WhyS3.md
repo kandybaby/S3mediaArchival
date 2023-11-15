@@ -18,10 +18,12 @@ This a 2.5.-2-1 and not a 3-2-1 because the S3 archive is crucially not an offsi
 
 However, I still believe this is a good solution for people desiring increased data protection, with reasonably low effort. Building a secondary NAS at your parents house will be cheaper, but it won't be less work. Also, the long-term unchanging nature of media makes it well suited for this kind of archive. When you download media, say a movie, the file will likely never change unless you replace it with something of a different quality or size. This means I am normally not worried about not having incremental restores.
 
+So even though my S3 archive is not a back up by the definition of the term, I feel as though its a hell of a lot better than having *nothing* off site. 
+
 ## The restores cost an insane amount of money
 Yes, they do. A full restore of 15TB from S3 could cost you as much as $1500, though it would probably be closer to $1000 if you used AWS Snowball (they ship you a harddrive instead of you downloading it).
 
-The whole point of an offsite S3 archive is that its a back up of last resort. It's an insurance policy if you lose both copies of your local data. If there is a fire, or your kid knocks a pitcher of juice onto your home lab. AWS S3 Deep Archive is currently $1/TB/Month, if you were to use a cloud service without egress fees, you would probably pay $5/TB/Month. If you were to store, for example, 10TB of data, you would need to do somewhere around 5 or 6 full restores for the other option to be cheaper.
+The whole point of an offsite S3 archive is that it's a back up of last resort. It's an insurance policy if you lose both copies of your local data. If there is a fire, or your kid knocks a pitcher of juice onto your home lab. AWS S3 Deep Archive is currently $1/TB/Month, if you were to use a cloud service without egress fees, you would probably pay $5/TB/Month. If you were to store, for example, 10TB of data for 10 years, you would need to do somewhere around 5 or 6 full restores during that 10-year period for the other option to be cheaper.
 
 In other words, the costs of the restores are high, but offset by the very low storage cost combined wth the fact that restores should be extremely rare.
 

@@ -79,13 +79,13 @@ But things get more complicated if we look at a hypothetical music library
 ----music
 ------Chapelle Roan
 --------The Rise and Fall of a mid-west princess
-----------01-feminenomenom
+----------01-femininomenom
 ------Carly Rae Jepsen 
 --------The Lovliest Time 
 ----------06-Kamikaze
 ```
 
-This music library is organized first my artist, then my album. The most convienent way to upload music would probably be albums. If you upload each artist as one file, if you add a new album, you'll need to re-upload the new artist object with the new album. But if you have an album, that won't ever need to be updated or changed.
+This music library is organized first by artist, then by album. The most convenient way to upload music would probably be albums. If you upload each artist as one file, if you add a new album, you'll need to re-upload the new artist object with the new album. But if you have an album, that won't ever need to be updated or changed.
 
 But there's a problem. We can tell the application to get all the folders in ```/data/music/``` but that will package up each artist, not each album. So the solution here is to use a special tag in your path like so
 
@@ -99,7 +99,7 @@ For another example, I could organize my comic books like this
 --data
 ----comics
 ------marvel
---------The Amazing Spiderman 
+--------The Amazing Spider-Man 
 ------DC
 --------The Flash
 ------Manga
