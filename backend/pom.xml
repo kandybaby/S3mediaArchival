@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>MediaArchival</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </parent>
     <artifactId>MediaArchivalBackend</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <properties>
         <java.version>18</java.version>
         <aws.java.sdk.version>2.20.109</aws.java.sdk.version>

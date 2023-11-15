@@ -3,10 +3,10 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>MediaArchival</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </parent>
     <artifactId>MediaArchivalFrontEnd</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <build>

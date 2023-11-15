@@ -2,7 +2,7 @@
 
 ### 0.1.1
 - fix download failure behavior 
-- minor documentation updates, added changelog
+- minor documentation updates
 
 ### 0.1.0
 - MVP - initial commit 
