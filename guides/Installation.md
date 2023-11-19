@@ -16,6 +16,7 @@ services:
       - AWS_ACCESS_KEY_ID=your_aws_key
       - AWS_SECRET_ACCESS_KEY=your_aws_secret_key
       - AWS_REGION=your_aws_region
+      - XMX=1g
     ports:
       - "your_port:8080"
     volumes:
@@ -36,10 +37,13 @@ Before you can use the application, you will need to come up with values for env
 
 #### Environment Variables
 
-The App has 3 mandatory, and one optional environment variables.
+The App has 3 mandatory, and 2 optional environment variables.
 
 ###### TRANSFER_THROUGHPUT
 The transfer throughput is optional, and it is the maximum amount of bandwidth (upload + download combined) that the application will use, in GbPS. The default value if not provided is 0.5 GbPS
+
+###### XMX 
+The XMX is optional, it is used to determine the maximum amount of memory the java application will use. The default is 1g. Note that this is not the total memory of the docker container itself, during uploads a heap max of 1g will probably lead to a container memory usage of about 1.5GB. I do not reccomend increasing this value higher than 1g, though you can try if you feel like your uploads are very slow. If you are more concerned about limiting memory, you can try lowering it so 512m for example. 
 
 ###### AWS_ACCESS_KEY_ID
 This is mandatory, and should be the AWS access key you saved during the AWS set up.
@@ -98,7 +102,7 @@ After successfully installing Docker, the next step is to pull and run the S3 Me
 
 1. Open your Terminal (Linux/macOS) or Command Prompt/Powershell (Windows).
 2. Pull the image using the following command: ```docker pull ghcr.io/kandybaby/s3mediaarchival:latest``` 
-3. You could alternatively use ```docker pull ghcr.io/kandybaby/s3mediaarchival:0.1.0```, or whatever your desired version of the application is. 
+3. You could alternatively use ```docker pull ghcr.io/kandybaby/s3mediaarchival:0.1.2```, or whatever your desired version of the application is. 
 
 ### Docker Run
 
@@ -119,7 +123,7 @@ docker run -d \
 --name s3-media-archival ghcr.io/kandybaby/s3mediaarchival:latest
 ```
 
-_Note: if you pulled s3mediaarchival:0.1.0, you should use that exactly. For example ``` --name s3-media-archival ghcr.io/kandybaby/s3mediaarchival:0.1.0```_
+_Note: if you pulled s3mediaarchival:0.1.2, you should use that exactly. For example ``` --name s3-media-archival ghcr.io/kandybaby/s3mediaarchival:0.1.2```_
 
 Once you have substituted in all your own configurations from the application configuration section of this guide, you can run this command in your cmd or terminal. When it finishes,  the application should now be running at ```localhost:8080``` or whichever port you picked.
 

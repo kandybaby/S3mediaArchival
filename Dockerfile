@@ -26,10 +26,13 @@ RUN mvn clean package -DskipTests
 # Final stage
 FROM bellsoft/liberica-openjdk-alpine:18.0.2.1
 
+# Set working directory
+WORKDIR /app
+
 # Copy the backend JAR file from the builder stage
 COPY --from=backend-builder /app/backend/target/MediaArchivalBackend-0.1.1.jar /app/app.jar
 
-WORKDIR /app
-
-# Run the application
-CMD ["java", "-jar", "app.jar"]
+# run the application
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
