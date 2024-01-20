@@ -1,4 +1,7 @@
 # Changelog 
+### 0.1.2 
+- Add heap size memory limit 
+- Update AWS deps
 
 ### 0.1.1
 - fix download failure behavior 

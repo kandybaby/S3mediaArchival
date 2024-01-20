@@ -30,7 +30,7 @@ FROM bellsoft/liberica-openjdk-alpine:18.0.2.1
 WORKDIR /app
 
 # Copy the backend JAR file from the builder stage
-COPY --from=backend-builder /app/backend/target/MediaArchivalBackend-0.1.1.jar /app/app.jar
+COPY --from=backend-builder /app/backend/target/MediaArchivalBackend-0.1.2.jar /app/app.jar
 
 # run the application
 COPY entrypoint.sh /entrypoint.sh
